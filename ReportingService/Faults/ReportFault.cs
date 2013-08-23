@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace ReportingService
+namespace ReportingService.Faults
 {
     [DataContract]
     public class ReportFault
