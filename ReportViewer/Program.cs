@@ -52,6 +52,8 @@ namespace ReportViewer
         {
             return Process(i =>
                 {
+
+                    // Создаем любой параментр, лишь бы был
                     var paramanter = new List<ReportParameter>
                         {
                             new ReportParameter {Name = "Name", Value = "John"}

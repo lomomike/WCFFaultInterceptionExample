@@ -6,6 +6,8 @@ using ReportingService.Faults;
 
 namespace ReportingService
 {
+    // ConfigurationName явно определяет конфиги, по которым настраивается служба.
+    // Без них созданный через Unity прокси не захостится.
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single,
                      ConcurrencyMode = ConcurrencyMode.Multiple,
                      ConfigurationName = "ReportingService.ReportService")]
