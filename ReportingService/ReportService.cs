@@ -8,12 +8,12 @@ namespace ReportingService
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single,
                      ConcurrencyMode = ConcurrencyMode.Multiple)]
-    class ReportService : IReportService
+    public class ReportService : IReportService
     {
         private readonly ReportRepository _repository = new ReportRepository();
         private readonly ReportPreparationQueue _queue = new ReportPreparationQueue();
 
-        public Guid PostReportToQueue(long id, List<ReportParameter> parameters)
+        public virtual Guid PostReportToQueue(long id, List<ReportParameter> parameters)
         {
             IReport report = _repository.Find(id);
             if (report == null)
@@ -28,7 +28,7 @@ namespace ReportingService
             return _queue.EnqueuePrepare(report, parameters);
         }
 
-        public bool CheckReportIsReady(Guid reportId)
+        public virtual bool CheckReportIsReady(Guid reportId)
         {
             return _queue.CheckReady(reportId);
         }

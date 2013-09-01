@@ -1,8 +1,10 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 
 namespace ReportingService.Faults
 {
     [DataContract]
+    [Serializable]
     public class ParametersFault
     {
         [DataMember]

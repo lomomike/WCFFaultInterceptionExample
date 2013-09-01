@@ -77,17 +77,20 @@
     <Compile Include="ReportPreparationQueue.cs" />
     <Compile Include="ReportRepository.cs" />
     <Compile Include="ReportService.cs" />
+    <Compile Include="Unity\ServiceFactory.cs" />
     <Compile Include="Unity\FaultInterceptor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
         <WcfProjectProperties>
-          <AutoStart>True</AutoStart>
+          <AutoStart>False</AutoStart>
         </WcfProjectProperties>
       </FlavorProperties>
     </VisualStudio>
