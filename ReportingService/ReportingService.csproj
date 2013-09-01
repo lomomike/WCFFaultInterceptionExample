@@ -85,12 +85,6 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ReportingService.Common\ReportingService.Common.csproj">
-      <Project>{0947a976-2146-464d-9f74-d94a8a1349bc}</Project>
-      <Name>ReportingService.Common</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
