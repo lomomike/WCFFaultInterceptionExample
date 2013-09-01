@@ -7,7 +7,8 @@ using ReportingService.Faults;
 namespace ReportingService
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single,
-                     ConcurrencyMode = ConcurrencyMode.Multiple)]
+                     ConcurrencyMode = ConcurrencyMode.Multiple,
+                     ConfigurationName = "ReportingService.ReportService")]
     public class ReportService : IReportService
     {
         private readonly ReportRepository _repository = new ReportRepository();
